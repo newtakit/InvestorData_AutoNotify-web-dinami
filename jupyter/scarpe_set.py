@@ -14,8 +14,16 @@ partial_html = element.get_attribute('outerHTML')  # ดึง HTML ทั้ง
 
 # แสดง HTML ที่ดึงมา
 data_df2 = pd.read_html(partial_html)[0]  # เลือกตารางแรก
-print(data_df2.head(12))  # แสดง 12 แถวแรกของ DataFrame
+# แก้ไขค่าของคอลัมน์ 'stock' ด้วยค่าที่เหมาะสม
+data_df2[('นักลงทุนสถาบัน', 'stock')] = [
+    "Futures", "Equity Index Futures", "Single Stock Futures", 
+    "Precious Metal Futures", "Deferred Precious Metal", 
+    "Currency Futures", "Interest Rate Futures", 
+    "Agriculture Futures", "Options", "SET50 Index Call", 
+    "SET50 Index Put", None  # หรือค่าอื่นๆ ที่เหมาะสม
+]
 
+print(data_df2)
 # ปิด WebDriver
 driver.quit()
 
