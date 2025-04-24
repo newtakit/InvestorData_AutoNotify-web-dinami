@@ -34,14 +34,14 @@ print(data_df2.head(12))  # แสดงข้อมูลบางส่วน�
 driver.quit()  # ปิด WebDriver
 
 # ขั้นตอนที่ 2: นำข้อมูลไปเก็บใน Google Sheets
-scopes = ['https://www.googleapis.com/auth/spreadsheets', 'https://www.googleapis.com/auth/drive']
+scopes = ['', '']
 credentials = Credentials.from_service_account_file(
     r'C:/Users/newta/OneDrive/Desktop/new-git-test/web-dinami/credentials.json', scopes=scopes)
 
 gc = gspread.authorize(credentials)
 
 # เปิด Google Sheets
-gs = gc.open_by_key('1ufmnoC_3ds_Gv9R0KvjN1GnIwHz8uCVdMTDib1Dlj_U')
+gs = gc.open_by_key('')
 worksheet1 = gs.worksheet('Sheet1')
 
 # อัปโหลดข้อมูลจาก DataFrame ไปยัง Google Sheets
