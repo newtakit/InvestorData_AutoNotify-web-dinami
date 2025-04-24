@@ -40,7 +40,7 @@ def scrape_tfex_data():
 
 # Function for storing data into Google Sheets
 def save_to_google_sheets(dataframe, sheet_id, worksheet_name, credentials_path):
-    scopes = ['https://www.googleapis.com/auth/spreadsheets', 'https://www.googleapis.com/auth/drive']
+    scopes = ['', '']
     credentials = Credentials.from_service_account_file(credentials_path, scopes=scopes)
 
     gc = gspread.authorize(credentials)
@@ -62,9 +62,9 @@ if __name__ == "__main__":
     
     if not data.empty:  # Proceed only if data was extracted successfully
         # Save to Google Sheets
-        sheet_id = '1ufmnoC_3ds_Gv9R0KvjN1GnIwHz8uCVdMTDib1Dlj_U'
+        sheet_id = ''
         worksheet_name = 'Sheet1'
-        credentials_path = r'C:/Users/newta/OneDrive/Desktop/new-git-test/web-dinami/credentials.json'
+        credentials_path = r''
         
         save_to_google_sheets(data, sheet_id, worksheet_name, credentials_path)
     else:
