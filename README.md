@@ -79,7 +79,7 @@ print("อัปโหลดข้อมูลสำเร็จ!")
 3: เข้าไปสร้าง app sheets และเขียนคำสั่งให้แจ้งผ่าน line
 
  
- ```
+
 
 
 const LINE_ACCESS_TOKEN = 'YOUR_NEW_LINE_CHANNEL_ACCESS_TOKEN'; // ใส่ Access Token ใหม่
@@ -134,4 +134,3 @@ const LINE_ACCESS_TOKEN = 'YOUR_NEW_LINE_CHANNEL_ACCESS_TOKEN'; // ใส่ Acc
   }
   
     
-```
