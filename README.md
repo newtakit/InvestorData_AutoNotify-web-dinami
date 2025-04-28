@@ -23,7 +23,8 @@ Library ที่ต้องลงเพิ่ม
  2: นำข้อมูลไปเก็บใน Google Sheets
  3: เข้าไปสร้าง app sheets และเขียนคำสั่งให้แจ้งผ่าน line
 
-```
+
+```[
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
@@ -74,7 +75,12 @@ worksheet1 = gs.worksheet('Sheet1')
 set_with_dataframe(worksheet1, data_df2)
 print("อัปโหลดข้อมูลสำเร็จ!")
 
+
+]
+
 ```
+
+
 
 3: เข้าไปสร้าง app sheets และเขียนคำสั่งให้แจ้งผ่าน line
 
@@ -82,7 +88,7 @@ print("อัปโหลดข้อมูลสำเร็จ!")
 
 
 
-const LINE_ACCESS_TOKEN = 'YOUR_NEW_LINE_CHANNEL_ACCESS_TOKEN'; // ใส่ Access Token ใหม่
+    const LINE_ACCESS_TOKEN = 'YOUR_NEW_LINE_CHANNEL_ACCESS_TOKEN'; // ใส่ Access Token ใหม่
     const GROUP_ID = 'YOUR_GROUP_ID'; // ใส่ Group ID ของกลุ่ม
   
     // เปิด Google Sheet และดึงข้อมูลทั้งหมดจาก Sheet
